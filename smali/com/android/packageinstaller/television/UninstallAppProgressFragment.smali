@@ -127,7 +127,7 @@
 
     iput-object p2, p0, Lcom/android/packageinstaller/television/UninstallAppProgressFragment;->mDeviceManagerButton:Landroid/widget/Button;
 
-    const p2, 0x7f080117
+    const p2, 0x7f080114
 
     .line 51
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -168,7 +168,7 @@
 
     invoke-virtual {p2, p3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p2, 0x7f0800df
+    const p2, 0x7f0800de
 
     .line 75
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -237,7 +237,7 @@
 
     move-result-object p0
 
-    const v0, 0x7f0800ee
+    const v0, 0x7f0800ed
 
     .line 103
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -248,7 +248,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f080100
+    const v0, 0x7f0800ff
 
     .line 104
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -259,7 +259,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0800ff
+    const v0, 0x7f0800fe
 
     .line 105
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -270,7 +270,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const p1, 0x7f0800e0
+    const p1, 0x7f0800df
 
     .line 106
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

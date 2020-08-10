@@ -414,7 +414,7 @@
     :cond_2
     if-eqz p1, :cond_3
 
-    const p1, 0x7f0c0067
+    const p1, 0x7f0c0065
 
     new-array p2, v0, [Ljava/lang/Object;
 

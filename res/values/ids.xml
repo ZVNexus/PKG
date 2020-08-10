@@ -141,7 +141,6 @@
     <item type="id" name="install_failed_incompatible" />
     <item type="id" name="install_failed_invalid_apk" />
     <item type="id" name="install_success" />
-    <item type="id" name="installed_app_version" />
     <item type="id" name="installing" />
     <item type="id" name="item_touch_helper_previous_elevation" />
     <item type="id" name="keepData" />
@@ -250,10 +249,7 @@
     <item type="id" name="total_time" />
     <item type="id" name="transitionPosition" />
     <item type="id" name="transport_row" />
-    <item type="id" name="updating_app_version" />
-    <item type="id" name="updating_app_view" />
     <item type="id" name="users_button" />
-    <item type="id" name="version_view" />
     <item type="id" name="video_surface" />
     <item type="id" name="video_surface_container" />
 </resources>

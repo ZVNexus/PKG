@@ -70,12 +70,12 @@
 
 .field public static final accessibility_custom_action_9:I = 0x7f080025
 
-.field public static final tag_accessibility_actions:I = 0x7f080101
+.field public static final tag_accessibility_actions:I = 0x7f080100
 
-.field public static final tag_accessibility_clickable_spans:I = 0x7f080102
+.field public static final tag_accessibility_clickable_spans:I = 0x7f080101
 
-.field public static final tag_accessibility_heading:I = 0x7f080103
+.field public static final tag_accessibility_heading:I = 0x7f080102
 
-.field public static final tag_accessibility_pane_title:I = 0x7f080104
+.field public static final tag_accessibility_pane_title:I = 0x7f080103
 
-.field public static final tag_screen_reader_focusable:I = 0x7f080105
+.field public static final tag_screen_reader_focusable:I = 0x7f080104

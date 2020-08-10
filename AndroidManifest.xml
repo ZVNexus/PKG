@@ -39,7 +39,7 @@
             </intent-filter>
         </activity>
         <activity android:exported="false" android:name="com.android.packageinstaller.InstallStaging"/>
-        <activity android:exported="false" android:name="com.android.packageinstaller.DeleteStagedFileOnResult" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:name="com.android.packageinstaller.DeleteStagedFileOnResult" android:theme="@style/Theme.AlertDialogActivity.NoActionBar"/>
         <activity android:exported="false" android:name="com.android.packageinstaller.PackageInstallerActivity"/>
         <activity android:exported="false" android:name="com.android.packageinstaller.InstallInstalling" android:theme="@style/Theme.AlertDialogActivity.NoAnimation"/>
         <receiver android:exported="true" android:name="com.android.packageinstaller.InstallEventReceiver" android:permission="android.permission.INSTALL_PACKAGES">
@@ -68,7 +68,7 @@
                 <data android:scheme="package"/>
             </intent-filter>
         </receiver>
-        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.android.packageinstaller.UninstallUninstalling"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.android.packageinstaller.UninstallUninstalling" android:theme="@style/Theme.AlertDialogActivity.NoActionBar"/>
         <receiver android:exported="false" android:name="com.android.packageinstaller.UninstallFinish"/>
         <activity android:configChanges="density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="false" android:name="com.android.packageinstaller.television.UninstallAppProgress"/>
         <service android:exported="true" android:name="com.android.packageinstaller.wear.WearPackageInstallerService" android:permission="com.google.android.permission.INSTALL_WEARABLE_PACKAGES"/>

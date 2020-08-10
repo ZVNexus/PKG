@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 52
+    .line 49
     invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method private getAppDataSize(Ljava/lang/String;Landroid/os/UserHandle;)J
     .locals 6
 
-    .line 102
+    .line 88
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -42,12 +42,12 @@
 
     if-nez p2, :cond_0
 
-    .line 107
+    .line 93
     invoke-virtual {v0}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object p2
 
-    .line 109
+    .line 95
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v0
@@ -59,7 +59,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 111
+    .line 97
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -82,7 +82,7 @@
 
     goto :goto_0
 
-    .line 114
+    .line 100
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/android/packageinstaller/handheld/UninstallAlertDialogFragment;->getAppDataSizeForUser(Ljava/lang/String;Landroid/os/UserHandle;)J
 
@@ -93,140 +93,85 @@
 .end method
 
 .method private getAppDataSizeForUser(Ljava/lang/String;Landroid/os/UserHandle;)J
-    .locals 9
+    .locals 2
 
-    .line 67
+    .line 65
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const-class v1, Landroid/os/storage/StorageManager;
+    const-class v1, Landroid/app/usage/StorageStatsManager;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/os/storage/StorageManager;
+    check-cast v0, Landroid/app/usage/StorageStatsManager;
 
-    .line 69
+    .line 68
+    :try_start_0
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
-    const-class v1, Landroid/app/usage/StorageStatsManager;
-
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    check-cast p0, Landroid/app/usage/StorageStatsManager;
+    const/4 v1, 0x0
 
-    .line 71
-    invoke-virtual {v0}, Landroid/os/storage/StorageManager;->getStorageVolumes()Ljava/util/List;
+    invoke-virtual {p0, p1, v1}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
-    move-result-object v0
+    move-result-object p0
 
-    .line 74
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->storageUuid:Ljava/util/UUID;
 
-    move-result v1
+    .line 67
+    invoke-virtual {v0, p0, p1, p2}, Landroid/app/usage/StorageStatsManager;->queryStatsForPackage(Ljava/util/UUID;Ljava/lang/String;Landroid/os/UserHandle;)Landroid/app/usage/StorageStats;
 
-    const-wide/16 v2, 0x0
+    move-result-object p0
 
-    const/4 v4, 0x0
+    .line 70
+    invoke-virtual {p0}, Landroid/app/usage/StorageStats;->getDataBytes()J
 
-    :goto_0
-    if-ge v4, v1, :cond_0
-
-    .line 78
-    :try_start_0
-    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/os/storage/StorageVolume;
-
-    invoke-virtual {v5}, Landroid/os/storage/StorageVolume;->getUuid()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v5}, Landroid/os/storage/StorageManager;->convert(Ljava/lang/String;)Ljava/util/UUID;
-
-    move-result-object v5
-
-    invoke-virtual {p0, v5, p1, p2}, Landroid/app/usage/StorageStatsManager;->queryStatsForPackage(Ljava/util/UUID;Ljava/lang/String;Landroid/os/UserHandle;)Landroid/app/usage/StorageStats;
-
-    move-result-object v5
+    move-result-wide p0
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 86
-    invoke-virtual {v5}, Landroid/app/usage/StorageStats;->getDataBytes()J
-
-    move-result-wide v5
-
-    add-long/2addr v2, v5
-
-    goto :goto_1
+    return-wide p0
 
     :catch_0
-    move-exception v5
+    move-exception p0
 
-    .line 81
-    sget-object v6, Lcom/android/packageinstaller/handheld/UninstallAlertDialogFragment;->LOG_TAG:Ljava/lang/String;
+    .line 72
+    sget-object p2, Lcom/android/packageinstaller/handheld/UninstallAlertDialogFragment;->LOG_TAG:Ljava/lang/String;
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "Cannot determine amount of app data for "
+    const-string v1, "Cannot determine amount of app data for "
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v8, " on "
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    .line 82
-    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-static {p2, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    move-result-object v8
+    const-wide/16 p0, 0x0
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v8, " (user "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v8, ")"
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 81
-    invoke-static {v6, v7, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :goto_1
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-wide v2
+    return-wide p0
 .end method
 
 .method private isSingleUser(Landroid/os/UserManager;)Z
     .locals 1
 
-    .line 223
+    .line 209
     invoke-virtual {p1}, Landroid/os/UserManager;->getUserCount()I
 
     move-result p0
@@ -235,7 +180,7 @@
 
     if-eq p0, p1, :cond_1
 
-    .line 225
+    .line 211
     invoke-static {}, Landroid/os/UserManager;->isSplitSystemUser()Z
 
     move-result v0
@@ -265,7 +210,7 @@
 
     if-ne p2, p1, :cond_1
 
-    .line 203
+    .line 189
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object p1
@@ -276,7 +221,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 204
+    .line 190
     invoke-virtual {p0}, Landroid/widget/CheckBox;->isChecked()Z
 
     move-result p0
@@ -290,13 +235,13 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 203
+    .line 189
     :goto_0
     invoke-virtual {p1, p0}, Lcom/android/packageinstaller/UninstallerActivity;->startUninstallProgress(Z)V
 
     goto :goto_1
 
-    .line 206
+    .line 192
     :cond_1
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
@@ -313,7 +258,7 @@
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 9
 
-    .line 122
+    .line 108
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object p1
@@ -322,7 +267,7 @@
 
     move-result-object p1
 
-    .line 124
+    .line 110
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -333,14 +278,14 @@
 
     move-result-object v0
 
-    .line 125
+    .line 111
     iget-object v1, v0, Lcom/android/packageinstaller/UninstallerActivity$DialogInfo;->appInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {v1, p1}, Landroid/content/pm/ApplicationInfo;->loadSafeLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 126
+    .line 112
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
@@ -349,12 +294,12 @@
 
     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 127
+    .line 113
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 131
+    .line 117
     iget-object v4, v0, Lcom/android/packageinstaller/UninstallerActivity$DialogInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     const/4 v5, 0x1
@@ -363,35 +308,35 @@
 
     if-eqz v4, :cond_0
 
-    .line 132
+    .line 118
     invoke-virtual {v4, p1}, Landroid/content/pm/ActivityInfo;->loadSafeLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    .line 133
+    .line 119
     invoke-virtual {v4, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-nez v7, :cond_0
 
-    const v7, 0x7f0c005c
+    const v7, 0x7f0c005a
 
     new-array v8, v5, [Ljava/lang/Object;
 
     aput-object v4, v8, v6
 
-    .line 135
+    .line 121
     invoke-virtual {p0, v7, v8}, Landroid/app/DialogFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 134
+    .line 120
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, " "
 
-    .line 136
+    .line 122
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
@@ -400,7 +345,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 140
+    .line 126
     :cond_0
     iget-object v4, v0, Lcom/android/packageinstaller/UninstallerActivity$DialogInfo;->appInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -417,7 +362,7 @@
     :cond_1
     move v4, v6
 
-    .line 142
+    .line 128
     :goto_0
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
@@ -429,16 +374,16 @@
 
     if-eqz v4, :cond_3
 
-    .line 144
+    .line 130
     invoke-direct {p0, v7}, Lcom/android/packageinstaller/handheld/UninstallAlertDialogFragment;->isSingleUser(Landroid/os/UserManager;)Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    const v4, 0x7f0c006d
+    const v4, 0x7f0c006b
 
-    .line 145
+    .line 131
     invoke-virtual {p0, v4}, Landroid/app/DialogFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -448,9 +393,9 @@
     goto :goto_1
 
     :cond_2
-    const v4, 0x7f0c006e
+    const v4, 0x7f0c006c
 
-    .line 147
+    .line 133
     invoke-virtual {p0, v4}, Landroid/app/DialogFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -459,7 +404,7 @@
 
     goto :goto_1
 
-    .line 150
+    .line 136
     :cond_3
     iget-boolean v4, v0, Lcom/android/packageinstaller/UninstallerActivity$DialogInfo;->allUsers:Z
 
@@ -471,9 +416,9 @@
 
     if-nez v4, :cond_4
 
-    const v4, 0x7f0c005f
+    const v4, 0x7f0c005d
 
-    .line 151
+    .line 137
     invoke-virtual {p0, v4}, Landroid/app/DialogFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -482,7 +427,7 @@
 
     goto :goto_1
 
-    .line 152
+    .line 138
     :cond_4
     iget-object v4, v0, Lcom/android/packageinstaller/UninstallerActivity$DialogInfo;->user:Landroid/os/UserHandle;
 
@@ -496,7 +441,7 @@
 
     if-nez v4, :cond_5
 
-    .line 153
+    .line 139
     iget-object v4, v0, Lcom/android/packageinstaller/UninstallerActivity$DialogInfo;->user:Landroid/os/UserHandle;
 
     invoke-virtual {v4}, Landroid/os/UserHandle;->getIdentifier()I
@@ -507,61 +452,61 @@
 
     move-result-object v4
 
-    const v7, 0x7f0c0060
+    const v7, 0x7f0c005e
 
     new-array v8, v5, [Ljava/lang/Object;
 
-    .line 154
+    .line 140
     iget-object v4, v4, Landroid/content/pm/UserInfo;->name:Ljava/lang/String;
 
     aput-object v4, v8, v6
 
-    .line 155
+    .line 141
     invoke-virtual {p0, v7, v8}, Landroid/app/DialogFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 154
+    .line 140
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
     :cond_5
-    const v4, 0x7f0c005e
+    const v4, 0x7f0c005c
 
-    .line 157
+    .line 143
     invoke-virtual {p0, v4}, Landroid/app/DialogFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 161
+    .line 147
     :goto_1
     invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     const v1, 0x104000a
 
-    .line 162
+    .line 148
     invoke-virtual {v2, v1, p0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     const/high16 v1, 0x1040000
 
-    .line 163
+    .line 149
     invoke-virtual {v2, v1, p0}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 165
+    .line 151
     iget-object v1, v0, Lcom/android/packageinstaller/UninstallerActivity$DialogInfo;->appInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    .line 169
+    .line 155
     :try_start_0
     invoke-virtual {p1, v1, v6}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object p1
 
-    .line 171
+    .line 157
     iget-object p1, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {p1}, Landroid/content/pm/ApplicationInfo;->hasFragileUserData()Z
@@ -575,7 +520,7 @@
     :catch_0
     move-exception p1
 
-    .line 173
+    .line 159
     sget-object v4, Lcom/android/packageinstaller/handheld/UninstallAlertDialogFragment;->LOG_TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -603,7 +548,7 @@
 
     if-eqz p1, :cond_7
 
-    .line 179
+    .line 165
     iget-boolean p1, v0, Lcom/android/packageinstaller/UninstallerActivity$DialogInfo;->allUsers:Z
 
     if-eqz p1, :cond_6
@@ -630,7 +575,7 @@
 
     if-nez p1, :cond_8
 
-    .line 183
+    .line 169
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -639,7 +584,7 @@
 
     goto :goto_5
 
-    .line 185
+    .line 171
     :cond_8
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getContext()Landroid/content/Context;
 
@@ -655,16 +600,16 @@
 
     const v7, 0x7f0a004e
 
-    .line 186
+    .line 172
     invoke-virtual {p1, v7, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/ViewGroup;
 
-    const v4, 0x7f0800d8
+    const v4, 0x7f0800d7
 
-    .line 188
+    .line 174
     invoke-virtual {p1, v4}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
 
     move-result-object v4
@@ -677,9 +622,9 @@
 
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v3, 0x7f0800a2
+    const v3, 0x7f0800a1
 
-    .line 189
+    .line 175
     invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
 
     move-result-object v3
@@ -688,19 +633,19 @@
 
     iput-object v3, p0, Lcom/android/packageinstaller/handheld/UninstallAlertDialogFragment;->mKeepData:Landroid/widget/CheckBox;
 
-    .line 190
+    .line 176
     iget-object v3, p0, Lcom/android/packageinstaller/handheld/UninstallAlertDialogFragment;->mKeepData:Landroid/widget/CheckBox;
 
     invoke-virtual {v3, v6}, Landroid/widget/CheckBox;->setVisibility(I)V
 
-    .line 191
+    .line 177
     iget-object v3, p0, Lcom/android/packageinstaller/handheld/UninstallAlertDialogFragment;->mKeepData:Landroid/widget/CheckBox;
 
-    const v4, 0x7f0c006c
+    const v4, 0x7f0c006a
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .line 192
+    .line 178
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getContext()Landroid/content/Context;
 
     move-result-object v7
@@ -711,17 +656,17 @@
 
     aput-object v0, v5, v6
 
-    .line 191
+    .line 177
     invoke-virtual {p0, v4, v5}, Landroid/app/DialogFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {v3, p0}, Landroid/widget/CheckBox;->setText(Ljava/lang/CharSequence;)V
 
-    .line 194
+    .line 180
     invoke-virtual {v2, p1}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
-    .line 197
+    .line 183
     :goto_5
     invoke-virtual {v2}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
@@ -733,17 +678,17 @@
 .method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 0
 
-    .line 212
+    .line 198
     invoke-super {p0, p1}, Landroid/app/DialogFragment;->onDismiss(Landroid/content/DialogInterface;)V
 
-    .line 213
+    .line 199
     invoke-virtual {p0}, Landroid/app/DialogFragment;->isAdded()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 214
+    .line 200
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object p0

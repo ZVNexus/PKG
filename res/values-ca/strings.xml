@@ -95,7 +95,7 @@
     <string name="uninstall_failure_notification_channel">Desinstal·lacions fallides</string>
     <string name="uninstall_keep_data">"Conserva %1$s de dades de l'aplicació."</string>
     <string name="uninstall_update_text">Vols substituir aquesta aplicació per la versió de fàbrica? Se suprimiran totes les dades.</string>
-    <string name="uninstall_update_text_multiuser">"Vols substituir aquesta aplicació per la versió de fàbrica? Se suprimiran totes les dades. Això afectarà tots els usuaris d'aquest dispositiu, inclosos els que tinguin un perfil de treball."</string>
+    <string name="uninstall_update_text_multiuser">"Vols substituir aquesta aplicació per la versió de fàbrica? Se suprimiran totes les dades. Això afectarà tots els usuaris d'aquest dispositiu, inclosos els que tinguin un perfil professional."</string>
     <string name="uninstall_update_title">"Desinstal·la l'actualització"</string>
     <string name="uninstalling">"S'està desinstal·lant…"</string>
     <string name="uninstalling_app">"S'està desinstal·lant %1$s…"</string>

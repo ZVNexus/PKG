@@ -297,7 +297,7 @@
 
     move-result v0
 
-    const v1, 0x7f0c0076
+    const v1, 0x7f0c0074
 
     if-eqz v0, :cond_0
 
@@ -306,7 +306,7 @@
 
     invoke-direct {v0}, Lcom/android/packageinstaller/television/ErrorFragment;-><init>()V
 
-    const v2, 0x7f0c0077
+    const v2, 0x7f0c0075
 
     invoke-direct {p0, v0, v2, v1}, Lcom/android/packageinstaller/UninstallerActivity;->showContentFragment(Landroid/app/Fragment;II)V
 
@@ -1093,7 +1093,7 @@
     .line 346
     new-instance v7, Landroid/app/NotificationChannel;
 
-    const v8, 0x7f0c0072
+    const v8, 0x7f0c0070
 
     .line 347
     invoke-virtual {p0, v8}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -1123,7 +1123,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f0c0071
+    const v8, 0x7f0c006f
 
     new-array v9, v11, [Ljava/lang/Object;
 

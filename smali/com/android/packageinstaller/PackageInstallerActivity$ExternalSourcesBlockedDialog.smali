@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 719
+    .line 706
     invoke-direct {p0}, Lcom/android/packageinstaller/PackageInstallerActivity$AppErrorDialog;-><init>()V
 
     return-void
@@ -27,12 +27,12 @@
 .method static newInstance(Ljava/lang/String;)Lcom/android/packageinstaller/PackageInstallerActivity$AppErrorDialog;
     .locals 1
 
-    .line 721
+    .line 708
     new-instance v0, Lcom/android/packageinstaller/PackageInstallerActivity$ExternalSourcesBlockedDialog;
 
     invoke-direct {v0}, Lcom/android/packageinstaller/PackageInstallerActivity$ExternalSourcesBlockedDialog;-><init>()V
 
-    .line 722
+    .line 709
     invoke-virtual {v0, p0}, Lcom/android/packageinstaller/PackageInstallerActivity$AppErrorDialog;->setArgument(Ljava/lang/CharSequence;)V
 
     return-object v0
@@ -43,7 +43,7 @@
 .method protected createDialog(Ljava/lang/CharSequence;)Landroid/app/Dialog;
     .locals 4
 
-    .line 729
+    .line 716
     :try_start_0
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
@@ -53,7 +53,7 @@
 
     move-result-object v0
 
-    .line 731
+    .line 718
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -64,7 +64,7 @@
 
     move-result-object v1
 
-    .line 733
+    .line 720
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
@@ -73,7 +73,7 @@
 
     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 734
+    .line 721
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
     move-result-object v3
@@ -82,7 +82,7 @@
 
     move-result-object v2
 
-    .line 735
+    .line 722
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getApplicationIcon(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -91,9 +91,9 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c0075
+    const v1, 0x7f0c0073
 
-    .line 736
+    .line 723
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
@@ -104,7 +104,7 @@
 
     invoke-direct {v2, p0, p1}, Lcom/android/packageinstaller/-$$Lambda$PackageInstallerActivity$ExternalSourcesBlockedDialog$A5PlzBSROq1mgW2jWjKzk3yMh4U;-><init>(Lcom/android/packageinstaller/PackageInstallerActivity$ExternalSourcesBlockedDialog;Ljava/lang/CharSequence;)V
 
-    .line 737
+    .line 724
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
@@ -115,12 +115,12 @@
 
     invoke-direct {v2, p0}, Lcom/android/packageinstaller/-$$Lambda$PackageInstallerActivity$ExternalSourcesBlockedDialog$L2lERdinc3mjPuJONSQQSBxnEFQ;-><init>(Lcom/android/packageinstaller/PackageInstallerActivity$ExternalSourcesBlockedDialog;)V
 
-    .line 752
+    .line 739
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 754
+    .line 741
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object p0
@@ -129,7 +129,7 @@
 
     return-object p0
 
-    .line 756
+    .line 743
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -149,7 +149,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 757
+    .line 744
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object p0
@@ -164,17 +164,17 @@
 .method public synthetic lambda$createDialog$0$PackageInstallerActivity$ExternalSourcesBlockedDialog(Ljava/lang/CharSequence;Landroid/content/DialogInterface;I)V
     .locals 1
 
-    .line 739
+    .line 726
     new-instance p2, Landroid/content/Intent;
 
     invoke-direct {p2}, Landroid/content/Intent;-><init>()V
 
     const-string p3, "android.settings.MANAGE_UNKNOWN_APP_SOURCES"
 
-    .line 740
+    .line 727
     invoke-virtual {p2, p3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 742
+    .line 729
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -193,10 +193,10 @@
 
     move-result-object p1
 
-    .line 743
+    .line 730
     invoke-virtual {p2, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 745
+    .line 732
     :try_start_0
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
@@ -215,7 +215,7 @@
 
     const-string p1, "Settings activity not found for action: android.settings.MANAGE_UNKNOWN_APP_SOURCES"
 
-    .line 748
+    .line 735
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -225,7 +225,7 @@
 .method public synthetic lambda$createDialog$1$PackageInstallerActivity$ExternalSourcesBlockedDialog(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 753
+    .line 740
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object p0

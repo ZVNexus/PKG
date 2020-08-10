@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 700
+    .line 687
     invoke-direct {p0}, Lcom/android/packageinstaller/PackageInstallerActivity$AppErrorDialog;-><init>()V
 
     return-void
@@ -27,12 +27,12 @@
 .method static newInstance(Ljava/lang/CharSequence;)Lcom/android/packageinstaller/PackageInstallerActivity$AppErrorDialog;
     .locals 1
 
-    .line 702
+    .line 689
     new-instance v0, Lcom/android/packageinstaller/PackageInstallerActivity$InstallErrorDialog;
 
     invoke-direct {v0}, Lcom/android/packageinstaller/PackageInstallerActivity$InstallErrorDialog;-><init>()V
 
-    .line 703
+    .line 690
     invoke-virtual {v0, p0}, Lcom/android/packageinstaller/PackageInstallerActivity$AppErrorDialog;->setArgument(Ljava/lang/CharSequence;)V
 
     return-object v0
@@ -43,7 +43,7 @@
 .method protected createDialog(Ljava/lang/CharSequence;)Landroid/app/Dialog;
     .locals 3
 
-    .line 709
+    .line 696
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
@@ -56,9 +56,9 @@
 
     invoke-direct {v1, p0}, Lcom/android/packageinstaller/-$$Lambda$PackageInstallerActivity$InstallErrorDialog$o_75ob8nQvqldslkDnXYGzX9T6E;-><init>(Lcom/android/packageinstaller/PackageInstallerActivity$InstallErrorDialog;)V
 
-    const v2, 0x7f0c0052
+    const v2, 0x7f0c0051
 
-    .line 710
+    .line 697
     invoke-virtual {v0, v2, v1}, Landroid/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
@@ -73,7 +73,7 @@
 
     const p1, 0x7f0c0020
 
-    .line 711
+    .line 698
     invoke-virtual {p0, p1, v1}, Landroid/app/DialogFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -82,7 +82,7 @@
 
     move-result-object p0
 
-    .line 712
+    .line 699
     invoke-virtual {p0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object p0
@@ -93,7 +93,7 @@
 .method public synthetic lambda$createDialog$0$PackageInstallerActivity$InstallErrorDialog(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 710
+    .line 697
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object p0

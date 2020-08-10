@@ -279,7 +279,7 @@
     .line 301
     iget-object v2, p0, Lcom/android/packageinstaller/PackageInstalledNotificationUtils;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f0c0051
+    const v3, 0x7f0c0050
 
     .line 302
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -331,7 +331,7 @@
 
     iget-object v5, p0, Lcom/android/packageinstaller/PackageInstalledNotificationUtils;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f0c0050
+    const v6, 0x7f0c004f
 
     .line 310
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;

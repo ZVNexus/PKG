@@ -62,28 +62,28 @@
 
 .field public static final icon:I = 0x7f08008c
 
-.field public static final lb_parallax_source:I = 0x7f0800b7
+.field public static final lb_parallax_source:I = 0x7f0800b6
 
-.field public static final lb_search_bar_badge:I = 0x7f0800bb
+.field public static final lb_search_bar_badge:I = 0x7f0800ba
 
-.field public static final lb_search_bar_items:I = 0x7f0800bc
+.field public static final lb_search_bar_items:I = 0x7f0800bb
 
-.field public static final lb_search_bar_speech_orb:I = 0x7f0800bd
+.field public static final lb_search_bar_speech_orb:I = 0x7f0800bc
 
-.field public static final lb_search_text_editor:I = 0x7f0800bf
+.field public static final lb_search_text_editor:I = 0x7f0800be
 
-.field public static final lb_slide_transition_value:I = 0x7f0800c3
+.field public static final lb_slide_transition_value:I = 0x7f0800c2
 
-.field public static final picker:I = 0x7f0800e5
+.field public static final picker:I = 0x7f0800e4
 
-.field public static final playback_progress:I = 0x7f0800e9
+.field public static final playback_progress:I = 0x7f0800e8
 
-.field public static final search_orb:I = 0x7f0800f6
+.field public static final search_orb:I = 0x7f0800f5
 
-.field public static final title_badge:I = 0x7f08010e
+.field public static final title_badge:I = 0x7f08010d
 
-.field public static final title_orb:I = 0x7f08010f
+.field public static final title_orb:I = 0x7f08010e
 
-.field public static final title_text:I = 0x7f080110
+.field public static final title_text:I = 0x7f08010f
 
-.field public static final transitionPosition:I = 0x7f080113
+.field public static final transitionPosition:I = 0x7f080112

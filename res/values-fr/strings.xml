@@ -98,7 +98,7 @@
     <string name="uninstall_update_text_multiuser">"Remplacer cette application par la version d'usine ? Toutes les données seront supprimées. Tous les utilisateurs de cet appareil seront affectés, y compris ceux qui ont un profil professionnel."</string>
     <string name="uninstall_update_title">Désinstaller la mise à jour</string>
     <string name="uninstalling">Désinstallation…</string>
-    <string name="uninstalling_app">Désinstallation de %1$s…</string>
+    <string name="uninstalling_app">Désinstallation du package %1$s…</string>
     <string name="uninstalling_notification_channel">Désinstallations en cours</string>
     <string name="unknown_apps_admin_dlg_text">"Votre administrateur n'autorise pas l'installation d'applications obtenues à partir de sources inconnues"</string>
     <string name="unknown_apps_user_restriction_dlg_text">"Cet utilisateur ne peut pas installer d'applications inconnues"</string>

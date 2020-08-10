@@ -98,7 +98,7 @@
     <string name="uninstall_update_text_multiuser">Želite li ovu aplikaciju zamijeniti s fabričkom verzijom? Svi podaci će biti uklonjeni. To će uticati na sve korisnike uređaja, uključujući i one s radnim profilima.</string>
     <string name="uninstall_update_title">Deinstaliraj ažuriranje</string>
     <string name="uninstalling">Deinstaliranje...</string>
-    <string name="uninstalling_app">Deinstaliranje aplikacije %1$s…</string>
+    <string name="uninstalling_app">Deinstaliranje paketa %1$s…</string>
     <string name="uninstalling_notification_channel">Tekuća deinstaliranja</string>
     <string name="unknown_apps_admin_dlg_text">Vaš administrator ne dozvoljava instaliranje aplikacija iz nepoznatih izvora</string>
     <string name="unknown_apps_user_restriction_dlg_text">Ovaj korisnik ne može instalirati nepoznate aplikacije</string>

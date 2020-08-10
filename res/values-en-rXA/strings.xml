@@ -70,11 +70,9 @@
     <string name="manage_device_administrators">[Ḿåñåĝé ðéVîçé åðḿîñ åþþš one two three]</string>
     <string name="manage_users">[Ḿåñåĝé ûšéŕš one two]</string>
     <string name="message_staging">[Šţåĝîñĝ åþþ… one two three]</string>
-    <string name="new_version_number">[Ţö ɓé îñšţåļļéð: %1$s one two three]</string>
     <string name="notification_installation_success_message">[Šûççéššƒûļļý îñšţåļļéð one two three]</string>
     <string name="notification_installation_success_status">[Šûççéššƒûļļý îñšţåļļéð “%1$s” one two three four]</string>
     <string name="ok">[ÖĶ one]</string>
-    <string name="old_version_number">[Îñšţåļļéð Véŕšîöñ: %1$s one two three]</string>
     <string name="orb_search_action">[Šéåŕçĥ Åçţîöñ one two]</string>
     <string name="out_of_space_dlg_text">"[%1$s çöûļðñ'ţ ɓé îñšţåļļéð. Fŕéé ûþ šöḿé šþåçé åñð ţŕý åĝåîñ. one two three four five six seven eight nine ten eleven twelve]"</string>
     <string name="out_of_space_dlg_title">[Öûţ öƒ šþåçé one two]</string>

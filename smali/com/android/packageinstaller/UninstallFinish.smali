@@ -291,7 +291,7 @@
     .line 76
     new-instance v11, Landroid/app/NotificationChannel;
 
-    const v12, 0x7f0c006b
+    const v12, 0x7f0c0069
 
     .line 78
     invoke-virtual {v2, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -514,7 +514,7 @@
     .line 122
     invoke-direct {v1, v2, v11}, Lcom/android/packageinstaller/UninstallFinish;->addDeviceManagerButton(Landroid/content/Context;Landroid/app/Notification$Builder;)V
 
-    const v0, 0x7f0c0068
+    const v0, 0x7f0c0066
 
     .line 123
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -551,7 +551,7 @@
 
     invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const v3, 0x7f0c0069
+    const v3, 0x7f0c0067
 
     .line 129
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -724,7 +724,7 @@
     :cond_b
     if-nez v9, :cond_c
 
-    const v0, 0x7f0c0062
+    const v0, 0x7f0c0060
 
     .line 168
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -739,7 +739,7 @@
     :cond_c
     if-eqz v8, :cond_d
 
-    const v0, 0x7f0c005d
+    const v0, 0x7f0c005b
 
     .line 172
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -752,7 +752,7 @@
     goto :goto_7
 
     :cond_d
-    const v0, 0x7f0c0063
+    const v0, 0x7f0c0061
 
     .line 175
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -762,7 +762,7 @@
     invoke-direct {v1, v11, v0}, Lcom/android/packageinstaller/UninstallFinish;->setBigText(Landroid/app/Notification$Builder;Ljava/lang/CharSequence;)V
 
     :goto_7
-    const v0, 0x7f0c0067
+    const v0, 0x7f0c0065
 
     const/4 v1, 0x1
 
@@ -807,7 +807,7 @@
     .line 87
     invoke-virtual {v9, v1}, Landroid/app/NotificationManager;->cancel(I)V
 
-    const v0, 0x7f0c0065
+    const v0, 0x7f0c0063
 
     const/4 v1, 0x1
 

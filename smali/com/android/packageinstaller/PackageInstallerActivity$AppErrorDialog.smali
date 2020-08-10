@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 767
+    .line 754
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,7 +51,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 766
+    .line 753
     invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
 
     return-void
@@ -65,7 +65,7 @@
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 0
 
-    .line 784
+    .line 771
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object p0
@@ -78,7 +78,7 @@
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 1
 
-    .line 779
+    .line 766
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object p1
@@ -99,17 +99,17 @@
 .method protected setArgument(Ljava/lang/CharSequence;)V
     .locals 2
 
-    .line 770
+    .line 757
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 771
+    .line 758
     sget-object v1, Lcom/android/packageinstaller/PackageInstallerActivity$AppErrorDialog;->ARGUMENT_KEY:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 772
+    .line 759
     invoke-virtual {p0, v0}, Landroid/app/DialogFragment;->setArguments(Landroid/os/Bundle;)V
 
     return-void

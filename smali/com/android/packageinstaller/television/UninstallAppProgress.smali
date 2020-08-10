@@ -236,7 +236,7 @@
 
     const-string v8, "user"
 
-    const v9, 0x7f0c0066
+    const v9, 0x7f0c0064
 
     const-string v10, " with code "
 
@@ -281,7 +281,7 @@
     goto/16 :goto_5
 
     :cond_7
-    const v0, 0x7f0c0064
+    const v0, 0x7f0c0062
 
     .line 144
     invoke-virtual {v1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -425,7 +425,7 @@
 
     invoke-interface {v0, v4}, Lcom/android/packageinstaller/television/UninstallAppProgress$ProgressFragment;->setDeviceManagerButtonVisible(Z)V
 
-    const v0, 0x7f0c0068
+    const v0, 0x7f0c0066
 
     .line 176
     invoke-virtual {v1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -463,7 +463,7 @@
 
     invoke-interface {v2, v5}, Lcom/android/packageinstaller/television/UninstallAppProgress$ProgressFragment;->setDeviceManagerButtonVisible(Z)V
 
-    const v2, 0x7f0c0069
+    const v2, 0x7f0c0067
 
     .line 183
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -555,7 +555,7 @@
     :cond_e
     add-int/lit8 v14, v14, 0x1
 
-    const v9, 0x7f0c0066
+    const v9, 0x7f0c0064
 
     goto :goto_2
 
@@ -602,7 +602,7 @@
     :goto_4
     if-nez v0, :cond_11
 
-    const v0, 0x7f0c0062
+    const v0, 0x7f0c0060
 
     .line 217
     invoke-virtual {v1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -639,7 +639,7 @@
 
     invoke-static {v12, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const v2, 0x7f0c0066
+    const v2, 0x7f0c0064
 
     .line 221
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -654,7 +654,7 @@
 
     if-eqz v0, :cond_13
 
-    const v0, 0x7f0c005d
+    const v0, 0x7f0c005b
 
     .line 224
     invoke-virtual {v1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -664,7 +664,7 @@
     goto :goto_5
 
     :cond_13
-    const v0, 0x7f0c0063
+    const v0, 0x7f0c0061
 
     .line 225
     invoke-virtual {v1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -818,12 +818,12 @@
     :goto_1
     if-eqz v0, :cond_3
 
-    const v0, 0x7f0c006f
+    const v0, 0x7f0c006d
 
     goto :goto_2
 
     :cond_3
-    const v0, 0x7f0c0061
+    const v0, 0x7f0c005f
 
     .line 347
     :goto_2

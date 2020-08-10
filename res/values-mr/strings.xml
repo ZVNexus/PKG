@@ -15,9 +15,9 @@
     <string name="generic_error_dlg_title">एरर</string>
     <string name="install">इंस्टॉल करा</string>
     <string name="install_apps_user_restriction_dlg_text">या वापरकर्त्याला अ‍ॅप्स इंस्टॉल करण्याची अनुमती नाही</string>
-    <string name="install_confirm_question">तुम्हाला हे ॲप्लिकेशन इंस्टॉल करायचे आहे का?</string>
-    <string name="install_confirm_question_update">तुम्हाच्या विद्यमान ॲप्लिकेशनवर अपडेट इंस्टॉल करायचे आहे का? तुमचा विद्यमान डेटा गमावणार नाही.</string>
-    <string name="install_confirm_question_update_system">तुम्हाला या बिल्ट-इन ॲप्लिकेशनवर अपडेट इंस्टॉल करायचे आहे का? तुमचा विद्यमान डेटा गमावणार नाही.</string>
+    <string name="install_confirm_question">तुम्हाला हे अॅप्लिकेशन इंस्टॉल करायचे आहे का?</string>
+    <string name="install_confirm_question_update">तुम्हाच्या विद्यमान अॅप्लिकेशनवर अपडेट इंस्टॉल करायचे आहे का? तुमचा विद्यमान डेटा गमावणार नाही.</string>
+    <string name="install_confirm_question_update_system">तुम्हाला या बिल्ट-इन अॅप्लिकेशनवर अपडेट इंस्टॉल करायचे आहे का? तुमचा विद्यमान डेटा गमावणार नाही.</string>
     <string name="install_done">अ‍ॅप इंस्टॉल झाले.</string>
     <string name="install_failed">अ‍ॅप इंस्टॉल झाले नाही.</string>
     <string name="install_failed_blocked">पॅकेज इंस्टॉल होण्यापासून ब्लॉक केले होते.</string>
@@ -77,7 +77,7 @@
     <string name="out_of_space_dlg_text">%1$s इंस्टॉल केले जाऊ शकत नाही. काही जागा मोकळी करा आणि पुन्हा प्रयत्न करा.</string>
     <string name="out_of_space_dlg_title">जागा संपली</string>
     <string name="status_bar_notification_info_overflow">९९९+</string>
-    <string name="uninstall_activity_text">%1$s खालील ॲपचा भाग आहे:</string>
+    <string name="uninstall_activity_text">%1$s खालील अॅपचा भाग आहे:</string>
     <string name="uninstall_all_blocked_profile_owner">हे अ‍ॅप काही वापरकर्ते किंवा प्रोफाइलसाठी आवश्यक आहे आणि इतरांसाठी अनइंस्टॉल करण्यात आले</string>
     <string name="uninstall_application_text">तुम्हाला हे अ‍ॅप अनइंस्टॉल करायचे आहे का?</string>
     <string name="uninstall_application_text_all_users">तुम्हाला हे अ‍ॅप <b>सर्व</b> वापरकर्त्यांसाठी अनइंस्टॉल करायचे आहे का? अ‍ॅप्लिकेशन आणि त्याचा डेटा डिव्हाइसवरील <b>सर्व</b> वापरकर्त्यांकडून काढला जाईल.</string>

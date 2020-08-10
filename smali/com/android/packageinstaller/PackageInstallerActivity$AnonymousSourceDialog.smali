@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 628
+    .line 615
     invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method static newInstance()Lcom/android/packageinstaller/PackageInstallerActivity$AnonymousSourceDialog;
     .locals 1
 
-    .line 630
+    .line 617
     new-instance v0, Lcom/android/packageinstaller/PackageInstallerActivity$AnonymousSourceDialog;
 
     invoke-direct {v0}, Lcom/android/packageinstaller/PackageInstallerActivity$AnonymousSourceDialog;-><init>()V
@@ -40,7 +40,7 @@
 .method public synthetic lambda$onCreateDialog$0$PackageInstallerActivity$AnonymousSourceDialog(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 640
+    .line 627
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object p0
@@ -49,10 +49,10 @@
 
     const/4 p1, 0x1
 
-    .line 642
+    .line 629
     invoke-static {p0, p1}, Lcom/android/packageinstaller/PackageInstallerActivity;->access$002(Lcom/android/packageinstaller/PackageInstallerActivity;Z)Z
 
-    .line 643
+    .line 630
     invoke-static {p0}, Lcom/android/packageinstaller/PackageInstallerActivity;->access$100(Lcom/android/packageinstaller/PackageInstallerActivity;)V
 
     return-void
@@ -61,7 +61,7 @@
 .method public synthetic lambda$onCreateDialog$1$PackageInstallerActivity$AnonymousSourceDialog(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 645
+    .line 632
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object p0
@@ -74,7 +74,7 @@
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 0
 
-    .line 651
+    .line 638
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object p0
@@ -87,7 +87,7 @@
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 2
 
-    .line 635
+    .line 622
     new-instance p1, Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
@@ -98,7 +98,7 @@
 
     const v0, 0x7f0c0003
 
-    .line 636
+    .line 623
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object p1
@@ -109,7 +109,7 @@
 
     const v1, 0x7f0c0002
 
-    .line 637
+    .line 624
     invoke-virtual {p1, v1, v0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object p1
@@ -120,12 +120,12 @@
 
     const p0, 0x7f0c000a
 
-    .line 645
+    .line 632
     invoke-virtual {p1, p0, v0}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object p0
 
-    .line 646
+    .line 633
     invoke-virtual {p0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object p0

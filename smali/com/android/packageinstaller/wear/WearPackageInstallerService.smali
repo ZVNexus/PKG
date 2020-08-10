@@ -169,7 +169,7 @@
 
     const-string v1, "wear_app_install_uninstall"
 
-    const v2, 0x7f0c0078
+    const v2, 0x7f0c0076
 
     .line 573
     invoke-virtual {p0, v2}, Landroid/app/Service;->getString(I)Ljava/lang/String;
@@ -1984,7 +1984,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f0c0071
+    const v6, 0x7f0c006f
 
     const/4 v7, 0x1
 
@@ -2313,7 +2313,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f0c0070
+    const p3, 0x7f0c006e
 
     .line 178
     invoke-virtual {p0, p3}, Landroid/app/Service;->getString(I)Ljava/lang/String;

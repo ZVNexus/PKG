@@ -2,7 +2,7 @@
 <resources>
     <string name="Parse_error_dlg_text">Arazo bat izan da paketea analizatzean.</string>
     <string name="anonymous_source_continue">Egin aurrera</string>
-    <string name="anonymous_source_warning">Telefonoak eta datu pertsonalek aplikazio ezezagunen erasoak jaso ditzakete. Aplikazio hau instalatzen baduzu, onartu egingo duzu zeu zarela hura erabiltzeagatik telefonoak jasan ditzakeen kalteen edo datu-galeren erantzulea.</string>
+    <string name="anonymous_source_warning">Telefonoak eta datu pertsonalek aplikazio ezezagunen erasoak jaso ditzakete. Aplikazio hau instalatzen baduzu, onartu egingo duzu zu zarela hura erabiltzeagatik telefonoak jasan ditzakeen kalteen edo datu-galeren erantzulea.</string>
     <string name="app_installed_notification_channel_description">Aplikazioa instalatu izanaren jakinarazpena</string>
     <string name="app_name">Pakete-instalatzailea</string>
     <string name="app_name_unknown">Ezezaguna</string>

@@ -90,7 +90,7 @@
 
     invoke-direct {v0, p0}, Lcom/android/packageinstaller/-$$Lambda$InstallStaging$ErrorDialog$z6Uttpne_gXZCqllYbnRjQ_S0Kk;-><init>(Lcom/android/packageinstaller/InstallStaging$ErrorDialog;)V
 
-    const p0, 0x7f0c0052
+    const p0, 0x7f0c0051
 
     .line 151
     invoke-virtual {p1, p0, v0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;

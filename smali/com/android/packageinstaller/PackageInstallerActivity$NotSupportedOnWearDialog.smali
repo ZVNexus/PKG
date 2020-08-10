@@ -18,9 +18,9 @@
 .method static newInstance()Lcom/android/packageinstaller/PackageInstallerActivity$SimpleErrorDialog;
     .locals 1
 
-    const v0, 0x7f0c0079
+    const v0, 0x7f0c0077
 
-    .line 660
+    .line 647
     invoke-static {v0}, Lcom/android/packageinstaller/PackageInstallerActivity$SimpleErrorDialog;->newInstance(I)Lcom/android/packageinstaller/PackageInstallerActivity$SimpleErrorDialog;
 
     move-result-object v0

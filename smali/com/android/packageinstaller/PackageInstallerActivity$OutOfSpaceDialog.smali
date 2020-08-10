@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 673
+    .line 660
     invoke-direct {p0}, Lcom/android/packageinstaller/PackageInstallerActivity$AppErrorDialog;-><init>()V
 
     return-void
@@ -27,12 +27,12 @@
 .method static newInstance(Ljava/lang/CharSequence;)Lcom/android/packageinstaller/PackageInstallerActivity$AppErrorDialog;
     .locals 1
 
-    .line 675
+    .line 662
     new-instance v0, Lcom/android/packageinstaller/PackageInstallerActivity$OutOfSpaceDialog;
 
     invoke-direct {v0}, Lcom/android/packageinstaller/PackageInstallerActivity$OutOfSpaceDialog;-><init>()V
 
-    .line 676
+    .line 663
     invoke-virtual {v0, p0}, Lcom/android/packageinstaller/PackageInstallerActivity$AppErrorDialog;->setArgument(Ljava/lang/CharSequence;)V
 
     return-object v0
@@ -51,14 +51,14 @@
 
     aput-object p1, v0, v1
 
-    const p1, 0x7f0c0055
+    const p1, 0x7f0c0053
 
-    .line 682
+    .line 669
     invoke-virtual {p0, p1, v0}, Landroid/app/DialogFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 683
+    .line 670
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
@@ -67,7 +67,7 @@
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 684
+    .line 671
     invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     move-result-object p1
@@ -78,7 +78,7 @@
 
     const v1, 0x7f0c004a
 
-    .line 685
+    .line 672
     invoke-virtual {p1, v1, v0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object p1
@@ -89,12 +89,12 @@
 
     const p0, 0x7f0c000a
 
-    .line 692
+    .line 679
     invoke-virtual {p1, p0, v0}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object p0
 
-    .line 693
+    .line 680
     invoke-virtual {p0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object p0
@@ -105,7 +105,7 @@
 .method public synthetic lambda$createDialog$0$PackageInstallerActivity$OutOfSpaceDialog(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 687
+    .line 674
     new-instance p1, Landroid/content/Intent;
 
     const-string p2, "android.intent.action.MANAGE_PACKAGE_STORAGE"
@@ -114,13 +114,13 @@
 
     const/high16 p2, 0x10000000
 
-    .line 688
+    .line 675
     invoke-virtual {p1, p2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 689
+    .line 676
     invoke-virtual {p0, p1}, Landroid/app/DialogFragment;->startActivity(Landroid/content/Intent;)V
 
-    .line 690
+    .line 677
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object p0
@@ -133,7 +133,7 @@
 .method public synthetic lambda$createDialog$1$PackageInstallerActivity$OutOfSpaceDialog(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 692
+    .line 679
     invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object p0

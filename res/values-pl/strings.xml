@@ -98,7 +98,7 @@
     <string name="uninstall_update_text_multiuser">Przywrócić fabryczną wersję tej aplikacji? Wszystkie dane zostaną usunięte. Dotyczy to wszystkich użytkowników tego urządzenia, również tych korzystających z profilu do pracy.</string>
     <string name="uninstall_update_title">Odinstaluj aktualizację</string>
     <string name="uninstalling">Odinstalowuję…</string>
-    <string name="uninstalling_app">Odinstalowuję %1$s…</string>
+    <string name="uninstalling_app">Odinstalowuję pakiet %1$s…</string>
     <string name="uninstalling_notification_channel">Aktywne odinstalowania</string>
     <string name="unknown_apps_admin_dlg_text">Twój administrator nie zezwala na instalowanie aplikacji pochodzących z nieznanych źródeł.</string>
     <string name="unknown_apps_user_restriction_dlg_text">Ten użytkownik nie może instalować nieznanych aplikacji</string>

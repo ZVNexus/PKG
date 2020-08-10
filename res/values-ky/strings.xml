@@ -2,7 +2,7 @@
 <resources>
     <string name="Parse_error_dlg_text">Таңгакты талдоодо маселе келип чыкты.</string>
     <string name="anonymous_source_continue">Улантуу</string>
-    <string name="anonymous_source_warning">Телефонуңуз жана жеке дайын-даректериңиз белгисиз колдонмолордон зыян тартып калышы мүмкүн. Бул колдонмону орнотуп, аны пайдалануудан улам телефонуңузга кандайдыр бир зыян келтирилсе же дайын-даректериңизды жоготуп алсаңыз, өзүңүз жооптуу болосуз.</string>
+    <string name="anonymous_source_warning">Телефонуңуз жана жеке дайындарыңыз белгисиз колдонмолордон зыян тартып калышы мүмкүн. Бул колдонмону орнотуп, аны пайдалануудан улам телефонуңузга кандайдыр бир зыян келтирилсе же дайындарыңызды жоготуп алсаңыз, өзүңүз жооптуу болосуз.</string>
     <string name="app_installed_notification_channel_description">Колдонмолорду орноткучтун билдирмелери</string>
     <string name="app_name">Топтомду орноткуч</string>
     <string name="app_name_unknown">Белгисиз</string>
@@ -16,8 +16,8 @@
     <string name="install">Орнотуу</string>
     <string name="install_apps_user_restriction_dlg_text">Бул колдонуучу колдонмолорду орното албайт</string>
     <string name="install_confirm_question">Бул колдонмону орнотоюн деп жатасызбы?</string>
-    <string name="install_confirm_question_update">Учурдагы колдонмону жаңыртканы жатасызбы? Буга чейин сакталган дайын-даректериңиз өчүрүлбөйт.</string>
-    <string name="install_confirm_question_update_system">Учурдагы алдын ала орнотулган колдонмону жаңыртканы жатасызбы? Буга чейин сакталган дайын-даректериңиз өчүрүлбөйт.</string>
+    <string name="install_confirm_question_update">Учурдагы колдонмону жаңыртканы жатасызбы? Буга чейин сакталган дайындарыңыз өчүрүлбөйт.</string>
+    <string name="install_confirm_question_update_system">Учурдагы алдын ала орнотулган колдонмону жаңыртканы жатасызбы? Буга чейин сакталган дайындарыңыз өчүрүлбөйт.</string>
     <string name="install_done">Колдонмо орнотулду.</string>
     <string name="install_failed">Колдонмо орнотулган жок.</string>
     <string name="install_failed_blocked">Топтомду орнотууга болбойт.</string>

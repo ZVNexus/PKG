@@ -100,7 +100,7 @@
 
     invoke-direct {p1, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0c0056
+    const v0, 0x7f0c0054
 
     .line 149
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
@@ -122,7 +122,7 @@
 
     aput-object v1, v0, v2
 
-    const v1, 0x7f0c0055
+    const v1, 0x7f0c0053
 
     invoke-virtual {p0, v1, v0}, Landroid/app/DialogFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 

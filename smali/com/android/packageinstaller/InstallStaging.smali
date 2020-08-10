@@ -175,7 +175,7 @@
     .line 72
     invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->setupAlert()V
 
-    const v0, 0x7f0800fc
+    const v0, 0x7f0800fb
 
     .line 73
     invoke-virtual {p0, v0}, Lcom/android/internal/app/AlertActivity;->requireViewById(I)Landroid/view/View;
